@@ -16,8 +16,8 @@ async function start () {
     try {
      await mongoose.connect(process.env.MONGO_URL, {
         useNewURLParser: true,
-     });
-        .then(() => console.log("ok")).catch(() => console.log("bad"))
+     })
+       .then(() => console.log("ok")).catch(() => console.log("bad"))
      app.listen(PORT, () => console.log(`Server: http://localhost:${PORT}`));
     } catch(error) {
         console.log(error);
